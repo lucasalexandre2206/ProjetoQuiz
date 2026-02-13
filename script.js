@@ -19,29 +19,229 @@ function iniciarJogo() {
   carregarPergunta();
 }
 
-/* BANCO DE PERGUNTAS (adicione quantas quiser) */
+/* BANCO DE PERGUNTAS */
 const perguntas = [
-  { q: "Qual é o menor país do mundo?", a: ["Mônaco", "Vaticano", "Malta", "San Marino"], correta: 1 },
-  { q: "Quem escreveu Dom Quixote?", a: ["Machado de Assis", "Cervantes", "Camões", "Shakespeare"], correta: 1 },
-  { q: "Qual é o metal líquido em temperatura ambiente?", a: ["Mercúrio", "Ferro", "Alumínio", "Prata"], correta: 0 },
-  { q: "Qual é o animal mais rápido do mundo?", a: ["Leopardo", "Guepardo", "Falcão-peregrino", "Cavalo"], correta: 2 },
-  { q: "Qual é a capital da Argentina?", a: ["Buenos Aires", "Córdoba", "Rosário", "Mendoza"], correta: 0 },
-  { q: "Quantos segundos tem um minuto?", a: ["60", "100", "30", "120"], correta: 0 },
-  { q: "Quem foi o primeiro homem a pisar na Lua?", a: ["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "John Glenn"], correta: 1 },
-  { q: "Qual é o maior deserto do mundo?", a: ["Saara", "Gobi", "Antártida", "Kalahari"], correta: 2 },
-  { q: "Qual é o idioma mais falado no mundo?", a: ["Inglês", "Mandarim", "Espanhol", "Hindi"], correta: 1 },
-  { q: "Qual é o símbolo químico da água?", a: ["O2", "H2O", "CO2", "HO"], correta: 1 },
-  { q: "Qual é o maior país do mundo em território?", a: ["China", "Canadá", "Rússia", "EUA"], correta: 2 },
-  { q: "Quem foi o primeiro presidente do Brasil?", a: ["Deodoro da Fonseca", "Getúlio Vargas", "Pedro II", "Floriano Peixoto"], correta: 0 },
-  { q: "Qual é o rio mais longo do mundo?", a: ["Nilo", "Amazonas", "Yangtzé", "Mississippi"], correta: 1 },
-  { q: "Qual é a moeda oficial do Japão?", a: ["Yuan", "Won", "Iene", "Dólar"], correta: 2 },
-  { q: "Quem escreveu 'Hamlet'?", a: ["Shakespeare", "Cervantes", "Goethe", "Camões"], correta: 0 },
-  { q: "Qual é o maior mamífero do mundo?", a: ["Elefante", "Baleia Azul", "Girafa", "Orca"], correta: 1 },
-  { q: "Qual é a capital de Portugal?", a: ["Lisboa", "Porto", "Coimbra", "Braga"], correta: 0 },
-  { q: "Quantos estados tem o Brasil?", a: ["24", "25", "26", "27"], correta: 3 },
-  { q: "Qual é o elemento químico representado por 'Au'?", a: ["Prata", "Cobre", "Ouro", "Alumínio"], correta: 2 },
-  { q: "Quem criou a teoria da relatividade?", a: ["Newton", "Einstein", "Galileu", "Tesla"], correta: 1 },
+  {
+    q: "Qual planeta é conhecido como o Planeta Vermelho?",
+    a: [
+      "Marte, por causa da sua superfície avermelhada",
+      "Júpiter, por ser o maior planeta",
+      "Vênus, por ser o mais quente",
+      "Saturno, por causa dos seus anéis"
+    ],
+    correta: 0
+  },
+
+  {
+    q: "Qual é o maior oceano do planeta Terra?",
+    a: [
+      "Oceano Atlântico",
+      "Oceano Índico",
+      "Oceano Pacífico",
+      "Oceano Ártico"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Quem pintou a obra Mona Lisa?",
+    a: [
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Michelangelo"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual país é conhecido como a Terra do Sol Nascente?",
+    a: [
+      "China",
+      "Coreia do Sul",
+      "Japão",
+      "Tailândia"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o maior órgão do corpo humano?",
+    a: [
+      "O coração",
+      "A pele",
+      "O fígado",
+      "O pulmão"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é a montanha mais alta do mundo?",
+    a: [
+      "Monte Kilimanjaro",
+      "Monte Everest",
+      "Monte Fuji",
+      "Monte Aconcágua"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Em que continente fica o Egito?",
+    a: [
+      "África",
+      "Ásia",
+      "Europa",
+      "América"
+    ],
+    correta: 0
+  },
+
+  {
+    q: "Qual é a capital do Canadá?",
+    a: [
+      "Toronto",
+      "Vancouver",
+      "Ottawa",
+      "Montreal"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual gás é essencial para a respiração humana?",
+    a: [
+      "Oxigênio",
+      "Nitrogênio",
+      "Gás Carbônico",
+      "Hélio"
+    ],
+    correta: 0
+  },
+
+  {
+    q: "Quem foi o descobridor do Brasil em 1500?",
+    a: [
+      "Cristóvão Colombo",
+      "Pedro Álvares Cabral",
+      "Vasco da Gama",
+      "Fernão de Magalhães"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é o maior animal terrestre do mundo?",
+    a: [
+      "Elefante africano",
+      "Rinoceronte branco",
+      "Girafa",
+      "Hipopótamo"
+    ],
+    correta: 0
+  },
+
+  {
+    q: "Qual é a capital da Itália?",
+    a: [
+      "Milão",
+      "Veneza",
+      "Roma",
+      "Florença"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual instrumento mede a temperatura?",
+    a: [
+      "Barômetro",
+      "Termômetro",
+      "Higrômetro",
+      "Altímetro"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é o maior planeta do Sistema Solar?",
+    a: [
+      "Terra",
+      "Marte",
+      "Júpiter",
+      "Saturno"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o idioma oficial do Brasil?",
+    a: [
+      "Espanhol",
+      "Inglês",
+      "Português",
+      "Francês"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o país com maior população do mundo atualmente?",
+    a: [
+      "Estados Unidos",
+      "Índia",
+      "China",
+      "Indonésia"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é a capital da Espanha?",
+    a: [
+      "Barcelona",
+      "Sevilha",
+      "Madri",
+      "Valência"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o principal gás responsável pelo efeito estufa?",
+    a: [
+      "Oxigênio",
+      "Hidrogênio",
+      "Gás Carbônico (CO₂)",
+      "Hélio"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o rio mais volumoso do mundo?",
+    a: [
+      "Rio Nilo",
+      "Rio Amazonas",
+      "Rio Yangtzé",
+      "Rio Mississippi"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Quem escreveu o livro 'O Pequeno Príncipe'?",
+    a: [
+      "Antoine de Saint-Exupéry",
+      "J. K. Rowling",
+      "George Orwell",
+      "Ernest Hemingway"
+    ],
+    correta: 0
+  }
 ];
+
 
 /* AVATARES */
 document.querySelectorAll(".avatares img").forEach(img => {
@@ -70,17 +270,6 @@ function renderJogadores() {
       <p>${j.nome}</p>
     </div>
   `).join("");
-}
-
-/* INICIAR */
-function iniciarJogo() {
-  perguntasJogo = [...perguntas].sort(() => 0.5 - Math.random());
-  perguntaAtual = 0;
-
-  cadastro.classList.add("hidden");
-  quiz.classList.remove("hidden");
-
-  carregarPergunta();
 }
 
 /* CARREGAR PERGUNTA */

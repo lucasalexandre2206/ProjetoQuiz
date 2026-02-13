@@ -11,11 +11,12 @@ body {
 }
 
 .container {
-  width: 90%;
-  margin: auto;
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px;
   text-align: center;
-  height: 100vh;
 }
+
 
 .hidden {
   display: none !important;
@@ -57,12 +58,18 @@ input {
 }
 
 .avatares img {
-  width: 70px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
+  object-fit: cover;     
+  background: #1c2145;   
+  padding: 4px;          
   margin: 10px;
-  opacity: .4;
+  opacity: .6;
   cursor: pointer;
+  transition: .2s;
 }
+
 
 .avatares img.ativo {
   opacity: 1;
@@ -98,7 +105,7 @@ input {
 
 .pergunta {
   max-width: 900px;
-  margin: 60px auto 20px;
+  margin: 120px auto 10px;
 }
 
 .alternativas-grid {
@@ -176,8 +183,10 @@ input {
 
 .modal-box {
   background: #14183a;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 80px;
+  border-radius: 14px;
+  max-width: 500px;
+  font-size: 14px;
 }
 
 
@@ -308,9 +317,7 @@ input {
 
 .como-jogar {
   text-align:center;
-  /* Centraliza o texto */
   margin: 30px auto;
-  /* Centraliza horizontalmente */
   background: rgba(255, 255, 255, 0.05);
   padding: 16px 20px;
   border-radius: 14px;
@@ -337,47 +344,168 @@ input {
 
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
-  .alternativas-grid {
-    grid-template-columns: 1fr; /* perguntas em coluna */
-  }
 
-  .cards, .jogadores-resposta, .ranking {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
+#btnRevelar {
+  display: block;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 350px;
 }
 
-/* Mobile */
+
+
+
+
 @media (max-width: 430px) {
-  h1, h2 {
+
+  body {
+    font-size: 18px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin: 20px 0;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  /* Cadastro ocupa tela toda */
+  #cadastro {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  input {
+    width: 100%;
+    font-size: 18px;
+    padding: 14px;
+  }
+
+  /* Avatares maiores */
+  .avatares {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .avatares img {
+    width: 75px;
+    height: 75px;
+  }
+
+  /* Cards jogadores cadastro */
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* Botões grandes */
+  .btn {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  /* QUIZ */
+  .pergunta {
+    margin: 30px 10px;
     font-size: 20px;
   }
 
-  input, .btn {
+  .alternativas-grid {
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  width: 100%;
+  padding: 0 10px;
+}
+
+
+  .alternativa {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  /* Jogadores respondendo */
+  .jogadores-resposta {
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .jogador-card {
+    width: 100%;
+  }
+
+  .letras button {
+    padding: 18px;
+    font-size: 20px;
+  }
+
+  /* Modal */
+  .modal-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .img-resultado {
+    width: 120px;
+  }
+
+  /* Ranking */
+  .ranking {
+    width: 100%;
+  }
+
+  .ranking-item {
+    padding: 12px;
+  }
+
+  .ranking-item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  /* Botão final */
+  .botoes-fim {
+    flex-direction: column;
+  }
+
+  .botoes-fim button {
+    width: 100%;
+    font-size: 18px;
+    padding: 16px;
+  }
+
+  .btn.verde {
+    width: 80%;
+    max-width: 320px;
+    display: block;
+    margin: 20px auto;
+  }
+  #fimJogo {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centraliza vertical */
+    align-items: center;       /* Centraliza horizontal */
+    text-align: center;
+    padding: 20px;
+  }
+
+  .ranking {
     width: 100%;
     max-width: 360px;
+    margin: 20px auto;
   }
 
-  .avatares {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    gap: 10px;
-  }
-
-  .cards, .jogadores-resposta, .ranking {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .card, .jogador-card, .ranking-item {
-    max-width: 100%;
-    margin: 0;
-  }
-
-  .modal-box {
-    width: 90%;
-    padding: 20px;
+  .botoes-fim {
+    justify-content: center;
+    width: 100%;
   }
 }

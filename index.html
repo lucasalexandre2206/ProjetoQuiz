@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <!-- CADASTRO -->
+        <section id="cadastro">
+            <h1>Game Quiz</h1>
+
+            <div class="como-jogar">
+                <h3>🎮 Como jogar</h3>
+                <ul>
+                    <li>Escolha um nome e um avatar</li>
+                    <li>Leia a pergunta na tela</li>
+                    <li>Cada jogador escolhe A, B, C ou D</li>
+                    <li>Quem acertar ganha pontos</li>
+                    <li>No final, veja o ranking 🏆</li>
+                </ul>
+            </div>
+
+            <input id="nomeJogador" placeholder="Nome do jogador">
+
+            <div class="avatares">
+                <img src="/img/1User.PNG">
+                <img src="/img/2User.PNG">
+                <img src="/img/3User.PNG">
+                <img src="/img/4User.PNG">
+                <img src="/img/5User.PNG">
+                <img src="/img/7User.PNG">
+                <img src="/img/8User.PNG">
+                <img src="/img/9User.PNG">
+            </div>
+
+            <button class="btn verde" onclick="adicionarJogador()">Adicionar Jogador</button>
+
+            <div id="cardsJogadores" class="cards"></div>
+
+            <button class="btn verde" onclick="iniciarJogo()">Começar Jogo</button>
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="hidden quiz-layout">
+
+            <h2 id="pergunta" class="pergunta"></h2>
+
+            <div id="alternativas" class="alternativas-grid"></div>
+
+            <button id="btnRevelar" class="btn revelar desativado" disabled>
+                REVELAR RESPOSTA
+            </button>
+
+            <div id="respostasJogadores" class="jogadores-resposta"></div>
+
+        </section>
+
+        <!-- MODAL -->
+        <div id="modal" class="modal hidden">
+            <div class="modal-box">
+                <div id="resultado"></div>
+                <button class="btn verde" onclick="fecharModal()">Fechar</button>
+            </div>
+        </div>
+
+        <!-- FIM -->
+        <div id="fimJogo" class="hidden">
+            <h2>Fim de Jogo!</h2>
+
+            <div id="rankingFinal" class="ranking"></div>
+
+            <div class="botoes-fim">
+                <button onclick="location.reload()" class="btn-verde">
+                    Jogar novamente
+                </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -337,24 +337,30 @@ btnRevelar.onclick = () => {
   `;
 
   // 👉 SE ALGUÉM ACERTOU
-  if (acertaram.length > 0) {
-    html += `
-      <img src="img/emojiJoia.jpg" class="img-resultado">
+if (acertaram.length > 0) {
 
-      <div class="acertos">
-        ${acertaram.map(j => `
-          <div class="acerto-item">
-            <img src="${j.avatar}">
-            <p>${j.nome}</p>
-          </div>
-        `).join("")}
-      </div>
+  const nomes = acertaram.map(j => j.nome).join(" e ");
+  const textoFinal = acertaram.length === 1
+    ? `${nomes} acertou!`
+    : `${nomes} acertaram!`;
 
-      <p class="texto-acerto">
-        ${acertaram.map(j => j.nome).join(" e ")} acertaram!
-      </p>
-    `;
-  }
+  html += `
+    <img src="img/emojijoia.jpg" class="img-resultado">
+
+    <div class="acertos">
+      ${acertaram.map(j => `
+        <div class="acerto-item">
+          <img src="${j.avatar}">
+          <p>${j.nome}</p>
+        </div>
+      `).join("")}
+    </div>
+
+    <p class="texto-acerto">
+      ${textoFinal}
+    </p>
+  `;
+}
   // 👉 SE NINGUÉM ACERTOU
   else {
     html += `

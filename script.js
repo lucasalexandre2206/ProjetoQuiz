@@ -345,7 +345,7 @@ if (acertaram.length > 0) {
     : `${nomes} acertaram!`;
 
   html += `
-    <img src="img/emojijoia.jpg" class="img-resultado">
+    <img src="img/emojiJoia.jpg" class="img-resultado">
 
     <div class="acertos">
       ${acertaram.map(j => `

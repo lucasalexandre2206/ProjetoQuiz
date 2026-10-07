@@ -19,7 +19,7 @@ function iniciarJogo() {
   carregarPergunta();
 }
 
-/* BANCO DE PERGUNTAS */
+/* BANCO DE PERGUNTAS - 50 PERGUNTAS */
 const perguntas = [
   {
     q: "Qual planeta é conhecido como o Planeta Vermelho?",
@@ -239,6 +239,356 @@ const perguntas = [
       "Ernest Hemingway"
     ],
     correta: 0
+  },
+
+  {
+    q: "Qual é a capital do Brasil?",
+    a: [
+      "São Paulo",
+      "Rio de Janeiro",
+      "Brasília",
+      "Salvador"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Quantos planetas existem no Sistema Solar?",
+    a: [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é o animal conhecido como o 'rei da selva'?",
+    a: [
+      "Tigre",
+      "Leão",
+      "Onça-pintada",
+      "Lobo"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é o resultado de 8 × 7?",
+    a: [
+      "48",
+      "54",
+      "56",
+      "64"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é o continente onde fica o Brasil?",
+    a: [
+      "América do Sul",
+      "América do Norte",
+      "Europa",
+      "África"
+    ],
+    correta: 0
+  },
+
+  {
+    q: "Qual órgão do corpo humano é responsável por bombear o sangue?",
+    a: [
+      "Pulmão",
+      "Cérebro",
+      "Coração",
+      "Estômago"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Qual é a estrela mais próxima da Terra?",
+    a: [
+      "Sirius",
+      "Sol",
+      "Estrela Polar",
+      "Betelgeuse"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual destes animais é um mamífero?",
+    a: [
+      "Tubarão",
+      "Jacaré",
+      "Golfinho",
+      "Pinguim"
+    ],
+    correta: 2
+  },
+
+  {
+    q: "Em qual país estão as pirâmides de Gizé?",
+    a: [
+      "México",
+      "Egito",
+      "Grécia",
+      "Índia"
+    ],
+    correta: 1
+  },
+
+  {
+    q: "Qual é o metal representado pelo símbolo químico 'Au'?",
+    a: [
+      "Prata",
+      "Ferro",
+      "Ouro",
+      "Cobre"
+    ],
+    correta: 2
+  },
+
+  // 31
+  {
+    q: "Quantos dias tem um ano bissexto?",
+    a: [
+      "364",
+      "365",
+      "366",
+      "367"
+    ],
+    correta: 2
+  },
+
+  // 32
+  {
+    q: "Qual é o maior país do mundo em extensão territorial?",
+    a: [
+      "Brasil",
+      "Canadá",
+      "China",
+      "Rússia"
+    ],
+    correta: 3
+  },
+
+  // 33
+  {
+    q: "Qual é o satélite natural da Terra?",
+    a: [
+      "Marte",
+      "Lua",
+      "Sol",
+      "Vênus"
+    ],
+    correta: 1
+  },
+
+  // 34
+  {
+    q: "Quem escreveu 'Romeu e Julieta'?",
+    a: [
+      "William Shakespeare",
+      "Machado de Assis",
+      "Victor Hugo",
+      "José de Alencar"
+    ],
+    correta: 0
+  },
+
+  // 35
+  {
+    q: "Qual é o animal terrestre mais rápido do mundo?",
+    a: [
+      "Leão",
+      "Guepardo",
+      "Cavalo",
+      "Lobo"
+    ],
+    correta: 1
+  },
+
+  // 36
+  {
+    q: "Qual é a capital da Argentina?",
+    a: [
+      "Santiago",
+      "Montevidéu",
+      "Buenos Aires",
+      "Lima"
+    ],
+    correta: 2
+  },
+
+  // 37
+  {
+    q: "Quantos lados tem um hexágono?",
+    a: [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    correta: 1
+  },
+
+  // 38
+  {
+    q: "Qual é o processo pelo qual as plantas produzem seu alimento?",
+    a: [
+      "Respiração",
+      "Digestão",
+      "Fotossíntese",
+      "Fermentação"
+    ],
+    correta: 2
+  },
+
+  // 39
+  {
+    q: "Qual é o menor planeta do Sistema Solar?",
+    a: [
+      "Marte",
+      "Mercúrio",
+      "Vênus",
+      "Netuno"
+    ],
+    correta: 1
+  },
+
+  // 40
+  {
+    q: "Qual país possui o formato de uma bota no mapa?",
+    a: [
+      "Espanha",
+      "Itália",
+      "França",
+      "Grécia"
+    ],
+    correta: 1
+  },
+
+  // 41
+  {
+    q: "Qual é o símbolo químico da água?",
+    a: [
+      "CO₂",
+      "O₂",
+      "H₂O",
+      "NaCl"
+    ],
+    correta: 2
+  },
+
+  // 42
+  {
+    q: "Qual é a capital da França?",
+    a: [
+      "Paris",
+      "Lyon",
+      "Marselha",
+      "Nice"
+    ],
+    correta: 0
+  },
+
+  // 43
+  {
+    q: "Quantos minutos existem em uma hora?",
+    a: [
+      "30",
+      "45",
+      "60",
+      "90"
+    ],
+    correta: 2
+  },
+
+  // 44
+  {
+    q: "Qual é o maior deserto quente do mundo?",
+    a: [
+      "Deserto do Saara",
+      "Deserto do Atacama",
+      "Deserto da Arábia",
+      "Deserto de Gobi"
+    ],
+    correta: 0
+  },
+
+  // 45
+  {
+    q: "Qual destes é um instrumento musical?",
+    a: [
+      "Violino",
+      "Microscópio",
+      "Telescópio",
+      "Termômetro"
+    ],
+    correta: 0
+  },
+
+  // 46
+  {
+    q: "Qual é a capital de Portugal?",
+    a: [
+      "Porto",
+      "Lisboa",
+      "Braga",
+      "Coimbra"
+    ],
+    correta: 1
+  },
+
+  // 47
+  {
+    q: "Qual é o resultado de 15 + 27?",
+    a: [
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    correta: 2
+  },
+
+  // 48
+  {
+    q: "Qual animal é conhecido por mudar de cor para se camuflar?",
+    a: [
+      "Camaleão",
+      "Elefante",
+      "Girafa",
+      "Canguru"
+    ],
+    correta: 0
+  },
+
+  // 49
+  {
+    q: "Qual é o planeta mais próximo do Sol?",
+    a: [
+      "Vênus",
+      "Terra",
+      "Mercúrio",
+      "Marte"
+    ],
+    correta: 2
+  },
+
+  // 50
+  {
+    q: "Qual é a capital do Japão?",
+    a: [
+      "Osaka",
+      "Tóquio",
+      "Kyoto",
+      "Hiroshima"
+    ],
+    correta: 1
   }
 ];
 
@@ -345,7 +695,7 @@ if (acertaram.length > 0) {
     : `${nomes} acertaram!`;
 
   html += `
-    <img src="img/emojiJoia.jpg" class="img-resultado">
+    <img src="img/emojijoinha.jpeg" class="img-resultado">
 
     <div class="acertos">
       ${acertaram.map(j => `
